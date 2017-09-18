@@ -21,6 +21,18 @@ public class A1Q6 {
         Scanner input = new Scanner(System.in);
         
         System.out.println("Enter a number between 50 and 100 to stop at.");
-        int number = input.nextInt();
+        double number = input.nextDouble();
+        int count = 100;
+        if (number >= 50 && number <= 100){
+            number = number/5;
+            number = Math.ceil(number);
+            number = number*5;
+            while (count >= number){
+                System.out.println(count);
+                count = count - 5;
+            }
+        }else{
+            System.out.println("Number must be between 50 and 100");
+        }
     }
 }
